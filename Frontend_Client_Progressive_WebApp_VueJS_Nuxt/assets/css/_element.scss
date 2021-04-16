@@ -1,0 +1,66 @@
+/* your sass here */
+@import '@/assets/css/_variables.scss';
+
+/* theme color */
+$--color-primary: $theme-color;
+
+/* icon font path, required */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import "~element-ui/packages/theme-chalk/src/index";
+
+// Buttons
+.el-button {
+  @apply border-none rounded-lg py-4;
+}
+
+// Inputs
+.el-input {
+  &__inner {
+    @apply border-transparent bg-gray-200 rounded-lg;
+  }
+
+  &.is-disabled {
+    .el-input__inner {
+      @apply border-transparent;
+    }
+  }
+}
+
+.el-textarea {
+  &__inner {
+    @apply border-transparent bg-gray-200 rounded-lg;
+  }
+}
+
+.el-form-item {
+  &__label {
+    line-height: 1;
+    padding: 0;
+  }
+}
+
+// Spinner
+.el-loading-spinner {
+  @apply flex;
+
+  svg {
+    @apply m-auto;
+  }
+}
+
+// Notifications
+.el-notification {
+  left: 50% !important;
+  transform: translate(-50%, 0);
+}
+
+.el-message-box{
+  &__wrapper{
+    @apply flex p-4;
+
+    .el-message-box{
+      @apply m-auto;
+    }
+  }
+}

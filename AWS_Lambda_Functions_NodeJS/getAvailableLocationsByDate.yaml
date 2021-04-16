@@ -1,0 +1,21 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: An AWS Serverless Specification template describing your function.
+Resources:
+  getAvailableLocationsByDate:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: index.handler
+      Runtime: nodejs12.x
+      CodeUri: .
+      Description: ''
+      MemorySize: 128
+      Timeout: 20
+      Role: >-
+        arn:aws:iam::393838307445:role/service-role/getAvailableLocationsByDate-role-g7vvj8kh
+      Events:
+        Api1:
+          Type: Api
+          Properties:
+            Path: /locations
+            Method: GET

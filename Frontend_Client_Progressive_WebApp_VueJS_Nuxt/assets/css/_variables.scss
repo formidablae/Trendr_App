@@ -1,0 +1,12 @@
+$background-color: #F5F5F9;
+$tabbar-height: 3rem;
+
+/* Colors */
+$theme-color: #3B3858;
+$primary-red: #FC5C65;
+$primary-dark: #222222;
+$secondary-dark: #3B3858;
+
+:export {
+  themeColor: $theme-color;
+}
